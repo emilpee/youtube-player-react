@@ -3,8 +3,8 @@ import SearchBar from './SearchBar';
 
 class App extends React.Component {
 
-  handleFormSubmit = () => {
-    console.log('Hello');
+  handleFormSubmit = (search) => {
+    console.log(search);
   }
 
   render() {
