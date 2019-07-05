@@ -2,13 +2,15 @@ import React from 'react';
 import SearchBar from './SearchBar';
 
 class App extends React.Component {
-  state = {
-    input: 'abc'
-  };
+
+  handleFormSubmit = () => {
+    console.log('Hello');
+  }
+
   render() {
     return (
       <div className="app">
-        <SearchBar />
+        <SearchBar handleFormSubmit={this.handleFormSubmit} />
       </div>
     )
   }
