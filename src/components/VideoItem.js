@@ -4,8 +4,13 @@ import '../css/main.css';
 const VideoItem = ({ video, videoSelect }) => {
     return (
         <div onClick={() => videoSelect(video)} className="video-item">
-            <h3>{video.snippet.title}</h3>
-            <img src={video.snippet.thumbnails.medium.url} />
+            <div className="side-1">
+                <img src={video.snippet.thumbnails.medium.url} />
+                <h3>{video.snippet.title}</h3>
+            </div>
+            <div className="side-2">
+                <small>Published at: {new Date(video.snippet.publishedAt).toLocaleDateString()}</small>
+            </div>
         </div>
     );
 }
