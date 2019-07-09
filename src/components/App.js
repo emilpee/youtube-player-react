@@ -2,7 +2,8 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
-import VideoItem from './VideoItem';
+import VideoView from './VideoView';
+import '../css/main.css';
 
 class App extends React.Component {
 
@@ -26,13 +27,16 @@ class App extends React.Component {
   }
 
   handleVideoSelect = (video) => {
-    console.log(video);
+    this.setState({
+      selectedVideo: video
+    });
   }
 
   render() {
     return ( 
       <div className="app">
         <SearchBar handleFormSubmit={this.handleFormSubmit} />
+        <VideoView video={this.state.selectedVideo} />
         {/* <span>Found: {this.state.videos.length} videos</span> */}
         <VideoList videos={this.state.videos} videoSelect={this.handleVideoSelect} />
       </div>

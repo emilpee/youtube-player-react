@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+.app {
+    width: 100vw;
+}
+
+.searchbar .search-form {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    background: tomato;
+    padding: 1rem;
+}
+
+
+.searchbar .search-form input[type="text"] {
+    margin: 1rem;
+}
+
+.video-list {
+    padding: 0;
+    width: 75%;
+    margin: auto;
+}
+
+.video-list :nth-child(1) {
+    border: none;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ccc;
+    align-items: center;
+    margin: .5rem 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.video-item h3 {
+    flex: 1;
+}
+
+.video-item img {
+    max-width: 200px;
+}
