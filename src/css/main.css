@@ -21,6 +21,19 @@ body {
     margin: 1rem;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .video-item-container {
+    flex: 1;
+}
+
+.container .video-list-container {
+    flex: 1;
+}
+
 .video-list {
     padding: 0;
     width: 75%;

@@ -11,7 +11,7 @@ const VideoView = ({ video }) => {
     return (
         <div className="video-view">
             <section className="video">
-                <iframe src={src} />
+                <iframe src={src} title={video.snippet.title} />
             </section>
             <h2>{video.snippet.title}</h2>
             <p>{video.snippet.description}</p>

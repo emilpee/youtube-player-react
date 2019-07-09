@@ -36,9 +36,15 @@ class App extends React.Component {
     return ( 
       <div className="app">
         <SearchBar handleFormSubmit={this.handleFormSubmit} />
-        <VideoView video={this.state.selectedVideo} />
         {/* <span>Found: {this.state.videos.length} videos</span> */}
-        <VideoList videos={this.state.videos} videoSelect={this.handleVideoSelect} />
+        <div className="container">
+          <div className="video-item-container">
+            <VideoView video={this.state.selectedVideo} />
+          </div>
+          <div className="video-list-container">
+            <VideoList videos={this.state.videos} videoSelect={this.handleVideoSelect} />
+          </div>
+        </div>
       </div>
     )
   }
