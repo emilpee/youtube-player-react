@@ -8,13 +8,22 @@ const VideoView = ({ video }) => {
 
     const src = `https://www.youtube.com/embed/${video.id.videoId}`;
 
+    const videoStyles = {
+        border: 'none',
+        maxWidth: '675',
+        height: '315'
+    }
+
+
     return (
         <div className="video-view">
             <section className="video">
-                <iframe src={src} title={video.snippet.title} />
+                <iframe src={src} title={video.snippet.title} style={videoStyles} />
             </section>
-            <h2>{video.snippet.title}</h2>
-            <p>{video.snippet.description}</p>
+            <section className="desc">
+                <h2>{video.snippet.title}</h2>
+                <p>{video.snippet.description}</p>
+            </section>
         </div>
     )
 }

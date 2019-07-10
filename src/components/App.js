@@ -12,6 +12,11 @@ class App extends React.Component {
     selectedVideo: null
   };
 
+  componentDidMount() {
+    this.handleFormSubmit('hello');
+  }
+
+
   handleFormSubmit = async (search) => {
     const getData = await youtube.get('/search', {
       params: {
@@ -21,7 +26,8 @@ class App extends React.Component {
 
     const response = getData.data.items;
     this.setState({
-      videos: response
+      videos: response,
+      selectedVideo: null
     })
 
   }
@@ -36,7 +42,6 @@ class App extends React.Component {
     return ( 
       <div className="app">
         <SearchBar handleFormSubmit={this.handleFormSubmit} />
-        {/* <span>Found: {this.state.videos.length} videos</span> */}
         <div className="container">
           <div className="video-item-container">
             <VideoView video={this.state.selectedVideo} />

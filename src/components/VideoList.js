@@ -5,7 +5,7 @@ import '../css/main.css';
 const VideoList = ({ videos, videoSelect }) => {
 
     const singleVideo = videos.map((video) => {
-        return <VideoItem video={video} key={video.id.videoId} videoSelect={videoSelect} />
+        return <VideoItem key={video.id.videoId} video={video} videoSelect={videoSelect} />
     })
 
     if (videos.length > 0) {
