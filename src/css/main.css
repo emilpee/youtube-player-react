@@ -14,7 +14,7 @@ body {
     justify-content: center;
     background: tomato;
     padding: 1rem;
-    font-family: 'Arial Narrow', sans-serif;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -105,7 +105,7 @@ body {
 }
 
 .video-item .side-1 img {
-    max-width: 200px;
+    max-width: 150px;
 }
 
 .video-item .side-2 {
@@ -131,7 +131,7 @@ body {
 }
 
 iframe, #player {
-    width: 700px;
-    height: 375px;
+    width: 600px;
+    height: 325px;
     margin: 0 1rem 0 0;
 }
